@@ -17,6 +17,10 @@
 		9923DAAA280560C4009E02D5 /* NotesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923DAA9280560C4009E02D5 /* NotesAppTests.swift */; };
 		9923DAB4280560C4009E02D5 /* NotesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923DAB3280560C4009E02D5 /* NotesAppUITests.swift */; };
 		9923DAB6280560C4009E02D5 /* NotesAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923DAB5280560C4009E02D5 /* NotesAppUITestsLaunchTests.swift */; };
+		9923DAC6280563B7009E02D5 /* NoteCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923DAC5280563B6009E02D5 /* NoteCellTableViewCell.swift */; };
+		9923DAC82805678B009E02D5 /* NoteAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923DAC72805678B009E02D5 /* NoteAddViewController.swift */; };
+		9923DACA280567A4009E02D5 /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923DAC9280567A4009E02D5 /* NoteDetailViewController.swift */; };
+		9923DACD28056EA4009E02D5 /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9923DACC28056EA4009E02D5 /* NotesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		9923DAAF280560C4009E02D5 /* NotesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9923DAB3280560C4009E02D5 /* NotesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppUITests.swift; sourceTree = "<group>"; };
 		9923DAB5280560C4009E02D5 /* NotesAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9923DAC5280563B6009E02D5 /* NoteCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCellTableViewCell.swift; sourceTree = "<group>"; };
+		9923DAC72805678B009E02D5 /* NoteAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteAddViewController.swift; sourceTree = "<group>"; };
+		9923DAC9280567A4009E02D5 /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
+		9923DACC28056EA4009E02D5 /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +109,10 @@
 		9923DA8E280560C1009E02D5 /* NotesApp */ = {
 			isa = PBXGroup;
 			children = (
-				9923DA8F280560C1009E02D5 /* AppDelegate.swift */,
-				9923DA91280560C1009E02D5 /* SceneDelegate.swift */,
-				9923DA93280560C1009E02D5 /* ViewController.swift */,
-				9923DA95280560C1009E02D5 /* Main.storyboard */,
-				9923DA9B280560C4009E02D5 /* Assets.xcassets */,
-				9923DA9D280560C4009E02D5 /* LaunchScreen.storyboard */,
-				9923DAA0280560C4009E02D5 /* Info.plist */,
-				9923DA98280560C1009E02D5 /* NotesApp.xcdatamodeld */,
+				9923DACB28056E81009E02D5 /* Models */,
+				9923DAC32805616B009E02D5 /* Controllers */,
+				9923DAC428056174009E02D5 /* Views */,
+				9923DAC22805610C009E02D5 /* Supporting Files */,
 			);
 			path = NotesApp;
 			sourceTree = "<group>";
@@ -128,6 +132,46 @@
 				9923DAB5280560C4009E02D5 /* NotesAppUITestsLaunchTests.swift */,
 			);
 			path = NotesAppUITests;
+			sourceTree = "<group>";
+		};
+		9923DAC22805610C009E02D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9923DA8F280560C1009E02D5 /* AppDelegate.swift */,
+				9923DA91280560C1009E02D5 /* SceneDelegate.swift */,
+				9923DA9B280560C4009E02D5 /* Assets.xcassets */,
+				9923DA9D280560C4009E02D5 /* LaunchScreen.storyboard */,
+				9923DAA0280560C4009E02D5 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9923DAC32805616B009E02D5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9923DA93280560C1009E02D5 /* ViewController.swift */,
+				9923DAC5280563B6009E02D5 /* NoteCellTableViewCell.swift */,
+				9923DAC72805678B009E02D5 /* NoteAddViewController.swift */,
+				9923DAC9280567A4009E02D5 /* NoteDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9923DAC428056174009E02D5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9923DA95280560C1009E02D5 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9923DACB28056E81009E02D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9923DA98280560C1009E02D5 /* NotesApp.xcdatamodeld */,
+				9923DACC28056EA4009E02D5 /* NotesModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,8 +305,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9923DAC82805678B009E02D5 /* NoteAddViewController.swift in Sources */,
+				9923DACA280567A4009E02D5 /* NoteDetailViewController.swift in Sources */,
 				9923DA94280560C1009E02D5 /* ViewController.swift in Sources */,
 				9923DA90280560C1009E02D5 /* AppDelegate.swift in Sources */,
+				9923DAC6280563B7009E02D5 /* NoteCellTableViewCell.swift in Sources */,
+				9923DACD28056EA4009E02D5 /* NotesModel.swift in Sources */,
 				9923DA92280560C1009E02D5 /* SceneDelegate.swift in Sources */,
 				9923DA9A280560C1009E02D5 /* NotesApp.xcdatamodeld in Sources */,
 			);
@@ -444,7 +492,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NotesApp/Info.plist;
+				INFOPLIST_FILE = "NotesApp/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -471,7 +519,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NotesApp/Info.plist;
+				INFOPLIST_FILE = "NotesApp/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
